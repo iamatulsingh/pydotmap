@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="pydotmap",
-    version="0.0.1",
+    version="0.0.2",
     author="Atul Kumar Singh",
     author_email="atulsingh0401@gmail.com",
     description="Dot notation python dicationary",
