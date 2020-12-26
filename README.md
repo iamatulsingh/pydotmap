@@ -18,7 +18,7 @@ print(author.get("sirname", "singh"))  # you can use your default value same as 
 print(author.addr[0].country)
 
 
-# Oderdered Map - This will maintain the order of your dictionary
+# Ordered Map - This will maintain the order of your dictionary
 
 author = OrderedDotMap(name="atul", sirname="singh", addr=[{"country": "India"}])
 print(author)
