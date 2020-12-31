@@ -1,11 +1,12 @@
 import setuptools
+from pydotmap._version import __version__
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="pydotmap",
-    version="0.0.5",
+    version=__version__,
     author="Atul Singh",
     author_email="atulsingh0401@gmail.com",
     description="Dot notation python dicationary",
