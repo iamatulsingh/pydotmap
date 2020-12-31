@@ -37,18 +37,23 @@ class DotMap(dict):
             elif isinstance(element, list):
                 self.__typecast(element)
 
+    def __getstate__(self):
+        return self
+
     def __getattr__(self, attr):
         return self.get(attr, '')
 
-    def __setattr__(self, key, value):
-        self.__setitem__(key, value)
+    # def __setattr__(self, key, value):
+    #     self.__setitem__(key, value)
+    __setattr__ = dict.__setitem__
+    __delattr__ = dict.__delitem__
 
     def __setitem__(self, key, value):
         super(DotMap, self).__setitem__(key, value)
         self.__dict__.update({key: value})
 
-    def __delattr__(self, item):
-        self.__delitem__(item)
+    # def __delattr__(self, item):
+    #     self.__delitem__(item)
 
     def __delitem__(self, key):
         super(DotMap, self).__delitem__(key)
@@ -91,18 +96,23 @@ class OrderedDotMap(OrderedDict):
             elif isinstance(element, list):
                 self.__typecast(element)
 
+    def __getstate__(self):
+        return self
+
     def __getattr__(self, attr):
         return self.get(attr, '')
 
-    def __setattr__(self, key, value):
-        self.__setitem__(key, value)
+    # def __setattr__(self, key, value):
+    #     self.__setitem__(key, value)
+    __setattr__ = dict.__setitem__
+    __delattr__ = dict.__delitem__
 
     def __setitem__(self, key, value):
         super(OrderedDotMap, self).__setitem__(key, value)
         self.__dict__.update({key: value})
 
-    def __delattr__(self, item):
-        self.__delitem__(item)
+    # def __delattr__(self, item):
+    #     self.__delitem__(item)
 
     def __delitem__(self, key):
         super(OrderedDotMap, self).__delitem__(key)

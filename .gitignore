@@ -5,3 +5,4 @@ pydotmap.egg-info
 **/__pycache__/*
 *.pyc
 **/*.pyc
+**/pydotmap/*.pyc
