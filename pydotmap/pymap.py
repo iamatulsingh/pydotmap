@@ -117,3 +117,10 @@ class OrderedDotMap(OrderedDict):
     def __delitem__(self, key):
         super(OrderedDotMap, self).__delitem__(key)
         del self.__dict__[key]
+
+
+def dotmap(f):
+    def converter(in_dict):
+        dotMap = DotMap(in_dict)
+        return f(dotMap)
+    return converter

@@ -1,6 +1,9 @@
 from .pymap import DotMap
 from .pymap import OrderedDotMap
+from .pymap import dotmap
 from ._version import __version__ as _version
+
+
 __version__ = _version
 __author__ = "Atul Singh"
 __copyright__ = "Copyright 2021"

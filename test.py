@@ -1,5 +1,6 @@
 from pydotmap import DotMap
 from pydotmap import OrderedDotMap
+from pydotmap import dotmap
 
 
 author = DotMap(name="atul", sirname="singh", addr=[{"country": "India"}])
@@ -15,3 +16,11 @@ print(author.addr[0].country)
 
 author = OrderedDotMap(name="atul", sirname="singh", addr=[{"country": "India"}])
 print(author)
+
+value = {"author": "atul"}
+
+@dotmap
+def check_decorator(in_value):
+    return in_value.author
+
+print(check_decorator(value))
