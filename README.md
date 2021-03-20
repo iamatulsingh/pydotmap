@@ -23,7 +23,6 @@ author.sirname = "Singh"
 ```
 from pydotmap import DotMap
 from pydotmap import OrderedDotMap
-from pydotmap import dotmap, ordered_dotmap
 
 
 author = DotMap(name="Atul", sirname="Singh", addr=["country": "India"])
@@ -64,6 +63,7 @@ b'\x80\x04\x952\x00\x00\x00\x00\x00\x00\x00\x8c\x0epydotmap.pymap\x94\x8c\x06Dot
 
 ```
 from pydotmap import dotmap
+from pydotmap import dotmap, ordered_dotmap
 
 value = {"author": "atul"}
 
