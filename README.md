@@ -6,7 +6,7 @@
 ### How to initialize?
 
 ```
-author = DotMap(name="Atul", sirname="Singh")
+author = DotMap(name="Atul", surname="Singh")
 ```
 
 Or
@@ -16,7 +16,7 @@ from pydotmap import DotMap
 
 author = DotMap()
 author.name = "Atul"
-author.sirname = "Singh"
+author.surname = "Singh"
 ```
 
 ### How to use?
@@ -25,18 +25,18 @@ from pydotmap import DotMap
 from pydotmap import OrderedDotMap
 
 
-author = DotMap(name="Atul", sirname="Singh", addr=["country": "India"])
+author = DotMap(name="Atul", surname="Singh", addr=["country": "India"])
 print(author.name)
-print(author.sirname)
-del author.sirname
-print(author.sirname)
-print(author.get("sirname", "singh"))  # you can use your default value same as dict
+print(author.surname)
+del author.surname
+print(author.surname)
+print(author.get("surname", "singh"))  # you can use your default value same as dict
 print(author.addr[0].country)
 
 
 # Ordered Map - This will maintain the order of your dictionary
 
-author = OrderedDotMap(name="atul", sirname="singh", addr=[{"country": "India"}])
+author = OrderedDotMap(name="atul", surname="singh", addr=[{"country": "India"}])
 print(author)
 
 ```
