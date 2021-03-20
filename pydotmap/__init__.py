@@ -1,6 +1,7 @@
 from .pymap import DotMap
 from .pymap import OrderedDotMap
 from .pymap import dotmap
+from .pymap import ordered_dotmap
 from ._version import __version__ as _version
 
 

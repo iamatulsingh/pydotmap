@@ -1,4 +1,5 @@
 from collections import OrderedDict
+from functools import wraps 
 
 
 class DotMap(dict):
@@ -119,8 +120,17 @@ class OrderedDotMap(OrderedDict):
         del self.__dict__[key]
 
 
-def dotmap(f):
-    def converter(in_dict):
+def dotmap(func):
+    @wraps(func)
+    def converter(in_dict: dict):
         dotMap = DotMap(in_dict)
-        return f(dotMap)
+        return func(dotMap)
+    return converter
+
+
+def ordered_dotmap(func):
+    @wraps(func)
+    def converter(in_dict: dict):
+        dotMap = OrderedDotMap(in_dict)
+        return func(dotMap)
     return converter
