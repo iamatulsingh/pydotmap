@@ -19,6 +19,15 @@ author.name = "Atul"
 author.surname = "Singh"
 ```
 
+Or
+
+```
+from pydotmap import DotMap
+
+author = DotMap({"name": "Atul", "surname": "Singh"})
+print(author.name, author.surname)
+```
+
 ### How to use?
 ```
 from pydotmap import DotMap
@@ -62,7 +71,6 @@ b'\x80\x04\x952\x00\x00\x00\x00\x00\x00\x00\x8c\x0epydotmap.pymap\x94\x8c\x06Dot
 ### How to use pydotmap decorator?
 
 ```
-from pydotmap import dotmap
 from pydotmap import dotmap, ordered_dotmap
 
 value = {"author": "atul"}
